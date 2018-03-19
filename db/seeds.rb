@@ -5,3 +5,13 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+Domain.destroy_all
+domains = [
+  {name: 'google.com'},
+  {name: 'youtube.com'},
+  {name: 'facebook.com'},
+  {name: 'yahoo.com'}
+]
+domains.each do |domain|
+  Domain.create(domain)
+end
