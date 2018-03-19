@@ -6,6 +6,7 @@
       <th scope="col">#</th>
       <th scope="col">Name</th>
       <th scope="col">Description</th>
+      <th scope="col">Category</th>
       <th scope="col">FTP_USR</th>
       <th scope="col">FTP_PWD</th>
       <th scope="col">DB_USR</th>
@@ -19,6 +20,7 @@
         <th scope="row"></th>
         <td><%=  link_to @domain.name, domain_path(@domain) %></td>
         <td><%=  @domain.description %></td>
+        <td><%=  @domain.category.name %></td>
         <td><%=  @domain.ftp_usr %></td>
         <td><%=  @domain.ftp_pwd %></td>
         <td><%=  @domain.db_usr %></td>

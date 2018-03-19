@@ -11,7 +11,7 @@ class DomainsController < ApplicationController
   end
 
   def create
-    domain_params = params.require(:domain).permit(:name, :description, :ftp_usr, :ftp_pwd, :db_usr, :db_pwd, :active)
+    domain_params = params.require(:domain).permit(:name, :description, :category_id, :ftp_usr, :ftp_pwd, :db_usr, :db_pwd, :active)
 
     @domain = Domain.new (domain_params)
 
@@ -30,7 +30,7 @@ class DomainsController < ApplicationController
 
   def update
     @domain = Domain.find(params[:id])
-    domain_params = params.require(:domain).permit(:name, :description, :ftp_usr, :ftp_pwd, :db_usr, :db_pwd, :active)
+    domain_params = params.require(:domain).permit(:name, :description, :category_id, :ftp_usr, :ftp_pwd, :db_usr, :db_pwd, :active)
     if @domain.update!(domain_params)
       flash[:notice] = 'Update sucessfully'
       redirect_to domains_path
