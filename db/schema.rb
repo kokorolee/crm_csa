@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180319020216) do
+ActiveRecord::Schema.define(version: 20180319021402) do
 
   create_table "domains", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "name"
@@ -19,6 +19,8 @@ ActiveRecord::Schema.define(version: 20180319020216) do
     t.string "ftp_pwd"
     t.string "db_usr"
     t.string "db_pwd"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
 end

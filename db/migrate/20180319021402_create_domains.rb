@@ -1,4 +1,4 @@
-class CreateDomain < ActiveRecord::Migration[5.1]
+class CreateDomains < ActiveRecord::Migration[5.1]
   def change
     create_table :domains do |t|
       t.string :name
@@ -7,6 +7,8 @@ class CreateDomain < ActiveRecord::Migration[5.1]
       t.string :ftp_pwd
       t.string :db_usr
       t.string :db_pwd
+
+      t.timestamps
     end
   end
 end
