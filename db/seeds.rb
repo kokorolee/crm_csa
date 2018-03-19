@@ -7,10 +7,10 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 Domain.destroy_all
 domains = [
-  {name: 'google.com'},
-  {name: 'youtube.com'},
-  {name: 'facebook.com'},
-  {name: 'yahoo.com'}
+  {name: 'google.com', active: true},
+  {name: 'youtube.com', active: true},
+  {name: 'facebook.com', active: true},
+  {name: 'yahoo.com', active: true}
 ]
 domains.each do |domain|
   Domain.create(domain)

@@ -39,6 +39,7 @@ gem 'bootstrap-sass', '~> 3.3.7'
 #form
 gem 'formtastic', '~> 3.0'
 gem 'jquery-rails'
+gem "therubyracer"
 
 
 group :development, :test do

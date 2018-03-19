@@ -1,24 +1,27 @@
 <h1>Index</h1>
 <h3><%= link_to 'New', new_domain_path%></h3>
 <table class="table table-hover">
-  <thead>
-    <tr>
-      <th scope="col">#</th>
-      <th scope="col">Name</th>
-      <th scope="col">Description</th>
-      <th scope="col">Active</th>
-      <th scope="col">Handle</th>
-    </tr>
-  </thead>
-  <tbody>
-    <% @domain.each do |domain| %>
-      <tr>
-        <th scope="row"></th>
-        <td><%=  domain.name %></td>
-        <td><%=  domain.description %></td>
-        <td><%=  domain.try('active') %></td>
-        <td><%=  link_to 'Edit', edit_domain_path(domain) %></td>
-      </tr>
-    <% end %>
-  </tbody>
+ <thead>
+  <tr>
+   <th scope="col">#</th>
+   <th scope="col">Name</th>
+   <th scope="col">Description</th>
+   <th scope="col">Active</th>
+   <th scope="col">Handle</th>
+  </tr>
+ </thead>
+ <tbody>
+  <% @domain.each do |domain| %>
+   <tr>
+    <th scope="row"></th>
+    <td><%= link_to domain.name, domain_path(domain) %></td>
+    <td><%= domain.description %></td>
+    <td><%= domain.try('active') %></td>
+    <td>
+       <%= link_to 'Edit', edit_domain_path(domain) %>
+       <%= link_to 'Del', domain_path(domain), method: :delete, data: {confirm: 'Are you sure to delete this domain?'} %>
+    </td>
+   </tr>
+  <% end %>
+ </tbody>
 </table>
