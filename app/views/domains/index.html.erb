@@ -1,0 +1,22 @@
+<h1>Index</h1>
+<h3><%= link_to 'New', new_domain_path%></h3>
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Name</th>
+      <th scope="col">Active</th>
+      <th scope="col">Handle</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @domain.each do |domain| %>
+      <tr>
+        <th scope="row"></th>
+        <td><%=  domain.name %></td>
+        <td><%=  domain.try('active') %></td>
+        <td><%=  link_to 'Edit', edit_domain_path(domain) %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
