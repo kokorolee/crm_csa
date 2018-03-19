@@ -1,10 +1,11 @@
 <%= semantic_form_for @domain do |f| %>
-  Name<%= f.input :name, lable: 'name' %>
-  Description <%= f.input :description %>
-  Ftp User <%= f.input :ftp_usr %>
-  Ftp Password <%= f.input :ftp_pwd %>
-  Database username <%= f.input :db_usr %>
-  Database password <%= f.input :db_pwd %>
-  Active <%= f.input :active %>
-  <%= f.submit :submit%>
+  Name               <%= f.input :name, lable: 'name' %>
+  Category           <%= f.input :category %>
+  Description        <%= f.input :description %>
+  Ftp User           <%= f.input :ftp_usr %>
+  Ftp Password       <%= f.input :ftp_pwd %>
+  Database username   <%= f.input :db_usr %>
+  Database password   <%= f.input :db_pwd %>
+  Active              <%= f.input :active %>
+                      <%= f.submit :submit%>
 <% end %>

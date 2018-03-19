@@ -36,10 +36,10 @@ gem 'jbuilder', '~> 2.5'
 #add new in project
 gem "awesome_print"
 gem 'bootstrap-sass', '~> 3.3.7'
-#form
-gem 'formtastic', '~> 3.0'
+gem 'formtastic', '~> 3.0' #form
 gem 'jquery-rails'
 gem "therubyracer"
+gem 'enumerize'
 
 
 group :development, :test do
