@@ -5,6 +5,7 @@
     <tr>
       <th scope="col">#</th>
       <th scope="col">Name</th>
+      <th scope="col">Description</th>
       <th scope="col">Active</th>
       <th scope="col">Handle</th>
     </tr>
@@ -14,6 +15,7 @@
       <tr>
         <th scope="row"></th>
         <td><%=  domain.name %></td>
+        <td><%=  domain.description %></td>
         <td><%=  domain.try('active') %></td>
         <td><%=  link_to 'Edit', edit_domain_path(domain) %></td>
       </tr>

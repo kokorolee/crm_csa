@@ -14,7 +14,7 @@ ActiveRecord::Schema.define(version: 20180319023450) do
 
   create_table "domains", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "name"
-    t.text "desctiption"
+    t.text "description"
     t.string "ftp_usr"
     t.string "ftp_pwd"
     t.string "db_usr"
