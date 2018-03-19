@@ -6,6 +6,19 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 Domain.destroy_all
+
+Category.destroy_all
+
+categories = [
+  {name: 'Technology'},
+  {name: 'Relax'},
+  {name: 'Languges'}
+]
+
+categories.each do |c|
+  Category.create(c)
+end
+
 domains = [
   {name: 'google.com', active: true},
   {name: 'youtube.com', active: true},
